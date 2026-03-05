@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start:dev": "node --watch server.js",
+    "db:seed": "node db/seed.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
