@@ -61,10 +61,10 @@ export const demoUsers = pgTable('demo_users', {
 ```
 
 ## Generate migrations
--- npx drizzle-kit generate
+- npx drizzle-kit generate
 
 ## Apply migrations
--- npx drizzle-kit migrate
+- npx drizzle-kit migrate
 
 ## Execute Drizzle Studio
--- npx drizzle-kit studio
+- npx drizzle-kit studio
