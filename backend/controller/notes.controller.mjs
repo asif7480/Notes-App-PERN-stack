@@ -94,7 +94,7 @@ const deleteNote = async (request, response) => {
         message: `Note not found.`,
       });
     }
-    await db.delete(notes).where(eq(note.id, id));
+    await db.delete(notes).where(eq(notes.id, id));
 
     return response
       .status(200)
