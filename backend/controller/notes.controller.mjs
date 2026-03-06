@@ -1,10 +1,10 @@
-import { eq } from "drizzle-orm";
+import { asc, eq } from "drizzle-orm";
 import { db } from "../db/db.mjs";
 import { notes } from "../schema/schema.mjs";
 
 const getAllNotes = async (request, response) => {
   try {
-    const allNotes = await db.select().from(notes);
+    const allNotes = await db.select().from(notes).orderBy(asc(notes.createdAt))
     return response.status(200).json({ notes: allNotes });
   } catch (err) {
     return response.status(500).json({
